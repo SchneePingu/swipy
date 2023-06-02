@@ -1,0 +1,43 @@
+{
+  "description": "An extension for Firefox to automate swiping bumble profiles.",
+  "manifest_version": 2,
+  "name": "swipy",
+  "version": "1.0",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "swipy@addonauthor.com",
+      "strict_min_version": "79.0"
+    }
+  },
+
+  "permissions": [
+    "storage",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "https://bumble.com/"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://bumble.com/app"],
+      "js": ["content.js"]
+    }],
+
+  "options_ui": {
+    "page": "configuration.html",
+    "browser_style": true
+  },
+
+  "page_action": {
+    "default_icon": "icon/autoplay.svg",
+    "default_title": "swipe profiles",
+    "show_matches": ["https://bumble.com/app"]
+  }
+}
+

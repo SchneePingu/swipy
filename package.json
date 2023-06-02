@@ -1,0 +1,15 @@
+{
+  "name": "swipy",
+  "version": "1.0",
+  "description": "An extension for Firefox to automate swiping bumble profiles.",
+  "scripts": {
+    "build": "web-ext build --source-dir src --overwrite-dest",
+    "lint": "web-ext lint --source-dir src --self-hosted --warnings-as-errors",
+    "sign": "web-ext sign --channel=unlisted --source-dir src"
+  },
+  "author": "AddOnAuthor",
+  "license": "MIT",
+  "devDependencies": {
+    "web-ext": "^7.6.2"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Configuration</title>
+</head>
+
+<body>
+<form>
+    <table>
+        <colgroup>
+            <col span="1" style="width: 15%;">
+            <col span="1" style="width: 65%;">
+            <col span="1" style="width: 20%;">
+        </colgroup>
+        <tbody>
+        <tr>
+            <th>Property</th>
+            <th>List of MATCHING values (comma-separated, e.g. "A", "B"): </th>
+            <th>Do NOT match if NOT specified?</th>
+        </tr>
+        <tr>
+            <td>
+                Children
+            </td>
+            <td>
+                <label for="familyText"></label>
+                <input type="text" id="familyText" name="familyText" size="50"/>
+            </td>
+            <td>
+                <label for="familyCheckbox"></label>
+                <input type="checkbox" id="familyCheckbox" name="familyCheckbox">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Smoking
+            </td>
+            <td>
+                <label for="smokingText"></label>
+                <input type="text" id="smokingText" name="smokingText" size="50"/>
+            </td>
+            <td>
+                <label for="smokingCheckbox"></label>
+                <input type="checkbox" id="smokingCheckbox" name="smokingCheckbox">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br />
+    <button type="submit">Save configuration</button>
+</form>
+<script src="configuration.js"></script>
+</body>
+</html>
