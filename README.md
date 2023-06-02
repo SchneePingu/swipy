@@ -1,4 +1,5 @@
 # [swipy]
+<a href="https://img.shields.io/badge/swipy-v1.0-blue.svg"><img src="https://img.shields.io/badge/swipy-v1.0-blue.svg" alt="swipy"></a>
 
 ## Installation
 
@@ -24,7 +25,7 @@ while a profile **not** matching the criteria has a profile header of the form
 
 ### Configuration
 
-To configure `swipy`, navigate to the browser menu for managing add-ons, which can be accessed by typing `about:addons` in the URL bar,
+To configure `swipy`, navigate to the browser menu for managing add-ons, which can be accessed by typing ``about:addons` in the URL bar,
 and open the settings of `swipy`. The settings provide you with the following form,
 where the entries in the lists of matching values correspond to the text displayed on profile badges:
 
@@ -46,12 +47,10 @@ where the entries in the lists of matching values correspond to the text display
                 Children
             </td>
             <td>
-                <label for="familyText"></label>
-                <input type="text" id="familyText" name="familyText" size="50" placeholder="&quot;Don't want&quot;"/>
+                "Don't want"
             </td>
             <td>
-                <label for="familyCheckbox"></label>
-                <input type="checkbox" id="familyCheckbox" name="familyCheckbox" checked>
+                ☑
             </td>
         </tr>
         <tr>
@@ -59,12 +58,10 @@ where the entries in the lists of matching values correspond to the text display
                 Smoking
             </td>
             <td>
-                <label for="smokingText"></label>
-                <input type="text" id="smokingText" name="smokingText" size="50" placeholder="&quot;Never&quot;"/>
+                "Never"
             </td>
             <td>
-                <label for="smokingCheckbox"></label>
-                <input type="checkbox" id="smokingCheckbox" name="smokingCheckbox">
+               ☐
             </td>
         </tr>
         </tbody>
