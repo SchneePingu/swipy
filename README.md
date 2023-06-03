@@ -1,12 +1,14 @@
 # [swipy]
-<a href="https://img.shields.io/badge/swipy-v1.0-blue.svg"><img src="https://img.shields.io/badge/swipy-v1.0-blue.svg" alt="swipy"></a>
+<a href="https://img.shields.io/badge/Release-v1.0-blue.svg"><img src="https://img.shields.io/badge/Release-v1.0-blue.svg" alt="Release"></a>
 
-## Installation
+<p align="left"><img src="/icon/swipy.svg" alt="swipy" width="150"></p>
+
+## Installation 🔧
 
 [Download](https://github.com/SchneePingu/swipy/releases/download/v1.0/swipy-v1.0.xpi) the `.xpi` file from the latest release. On downloading the extension, Firefox will ask you about installing it.
 That's it!
 
-## Description
+## Description 📜
 `swipy` is an extension for Firefox to automate swiping profiles on the dating web app `Bumble`.
 It rates profiles according to configurable matching criteria and marks a profile as either matching or not matching.
 
@@ -82,8 +84,11 @@ To start automatically "liking" and "disliking" profiles, click the
 icon in the browser's URL bar.
 This continuously swipes profiles until the maximal number of daily "likes" is reached, the web page is reloaded or an error occurs with the routine.
 
+## Why have I wrote swipy? ❤️
+`swipy` is NOT meant to do any harm to anyone or anything. It is NOT meant to support you on treating people superfically and finding hook-ups. Neither is it meant to harm the dating web app in any way.
+**It is meant for those who have a hard time finding love, such as me, and could use a helping hand.** Hopefully `swipy` can be this for you. If but one finds true love by means of it, all the effort and time it took me to create this was worth it.
 
-## Developer Zone
+## Developer Zone 🧬
 
 `swipy` is an extension for Firefox written in `JavaScript` and build with [npm](https://www.npmjs.com/) and [web-ext](https://github.com/mozilla/web-ext).
 To set up the development environment, download this repository, install `npm` and run `npm install` within the root directory of the repository.
