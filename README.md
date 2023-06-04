@@ -9,7 +9,7 @@
 That's it!
 
 ## Description 📜
-`swipy` is an extension for Firefox to automate swiping profiles on the dating web app `Bumble`.
+`swipy` is an extension for Firefox to automate swiping profiles on the dating web app [bumble](https://bumble.com/app).
 It rates profiles according to configurable matching criteria and marks a profile as either matching or not matching.
 
 **Notice that a profile, which "likes" you, is always considered a matching profile.**
@@ -79,14 +79,16 @@ where the entries in the lists of matching values correspond to the text display
 `swipy` provides the functionality to automatically "like" and "dislike" profiles according to the rating described above,
 that is a profile matching the criteria is "liked", while a profile **not** matching the criteria is "disliked".
 
-To start automatically "liking" and "disliking" profiles, click the
+To start automatically "liking" and "disliking" profiles, navigate to the view, where profiles are shown to you, and click the
 ![Test](src/icon/autoplay.svg)
 icon in the browser's URL bar.
-This continuously swipes profiles until the maximal number of daily "likes" is reached, the web page is reloaded or an error occurs with the routine.
+This continuously swipes profiles until the maximal number of daily "likes" is reached, you leave the profiles view, the web page is reloaded or an error occurs with the routine.
+
+(If you experience that the automated swiping does not start on clicking the icon, please reload the web page and try again.)
 
 ## Why have I wrote swipy? ❤️
-`swipy` is NOT meant to do any harm to anyone or anything. It is NOT meant to support you on treating people superfically and finding hook-ups. Neither is it meant to harm the dating web app in any way.
-**It is meant for those who have a hard time finding love, such as me, and could use a helping hand.** Hopefully `swipy` can be this for you. If but one finds true love by means of it, all the effort and time it took me to create this was worth it.
+`swipy` is NOT meant to do any harm to anyone or anything. It is NOT meant to support you on treating people superfically and finding hook-ups. Neither is it meant to harm the dating web app and the company behind it in any way.
+**It is meant for those who have a very hard time finding love, much like me, and could use a helping hand, such like me.** Hopefully `swipy` can be this for you. If but one finds a beloved person by means of it, all the effort and time it took me to create this was worth it.
 
 ## Developer Zone 🧬
 
