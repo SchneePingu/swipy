@@ -27,7 +27,7 @@ while a profile **not** matching the criteria has a profile header of the form
 
 ### Configuration
 
-To configure `swipy`, navigate to the browser menu for managing add-ons, which can be accessed by typing ``about:addons` in the URL bar,
+To configure `swipy`, navigate to the browser menu for managing add-ons, which can be accessed by typing [about:addons](about:addons) in the URL bar,
 and open the settings of `swipy`. The settings provide you with the following form,
 where the entries in the lists of matching values correspond to the text displayed on profile badges:
 
