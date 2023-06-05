@@ -1,7 +1,7 @@
 # [swipy]
 <a href="https://img.shields.io/badge/Release-v1.0-blue.svg"><img src="https://img.shields.io/badge/Release-v1.0-blue.svg" alt="Release"></a>
 
-<p align="left"><img src="/icon/swipy.svg" alt="swipy" width="150"></p>
+<img src="/icon/swipy.svg" alt="swipy" width="150">
 
 ## Installation 🔧
 
@@ -86,9 +86,9 @@ This continuously swipes profiles until the maximal number of daily "likes" is r
 
 (If you experience that the automated swiping does not start on clicking the icon, please reload the web page and try again.)
 
-## Why have I wrote swipy? ❤️
-`swipy` is NOT meant to do any harm to anyone or anything. It is NOT meant to support you on treating people superfically and finding hook-ups. Neither is it meant to harm the dating web app and the company behind it in any way.
-**It is meant for those who have a very tough time finding love, much like me, and could use a helping hand, such like me.** Hopefully `swipy` can be this for you. If but one finds a beloved person by means of it, all the effort and time it took me to create this was worth it.
+## Why have I written swipy? ❤️
+`swipy` is NOT meant to do any harm to anyone or anything. It is NOT meant to support you on treating people superficially and finding hook-ups. Neither is it meant to harm the dating web app and the company behind it in any way.
+**It is meant for those who have a very tough time finding love, much like me, and could use a helping hand, such like me.** Hopefully `swipy` can be this for you. If at least one finds a beloved person by means of it, all the effort and time it took me to create this was worth it.
 
 ## Disclaimer ⚠️
 Please be aware that you are using `swipy` on your own risk!
