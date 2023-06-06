@@ -3,7 +3,8 @@
 ## Release 1.0.1 
 
 ### Bug Fixes
-* Read changes of the matching criteria before rating profiles.
+* Read changes made to the matching criteria.
+* Make automated swiping available right after login.
 
 ## Release 1.0.0
 
