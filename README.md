@@ -97,7 +97,7 @@ Maybe all of a sudden profiles are rated wrongly, because the code of the dating
 Maybe all of a sudden the dating web app blocks you, because you are swiping profiles at machine-like speed.
 Imagine what this would mean to you and weigh the risks.
 
-I AM NOT RESPONSIBLE FOR ANYTHING ANYONE DOES WITH THE SOURCE CODE OF `swipy`.
+I AM NOT RESPONSIBLE FOR ANYTHING ANYONE DOES BY MEANS OF `swipy`.
 
 ## Developer Zone 🧬
 
