@@ -7,12 +7,6 @@ const NEGATIVE_VOTE_IDENTIFIER = "[-]";
 let EXTENSION_CONFIGURATION = null
 
 browser.webRequest.onBeforeRequest.addListener(
-  loadWebAppListener,
-  { urls: ["https://bumble.com/app"] },
-  ["blocking"]
-)
-
-browser.webRequest.onBeforeRequest.addListener(
   loadProfilesListener,
   { urls: ["https://bumble.com/*SERVER_GET_ENCOUNTERS"] },
   ["blocking"]
@@ -27,18 +21,9 @@ browser.pageAction.onClicked.addListener(() => {
     .then(voteProfiles);
 })
 
-function loadWebAppListener(details) {
-  browser.storage.sync.get('extensionConfiguration')
-    .then((result) => {
-      EXTENSION_CONFIGURATION = result.extensionConfiguration;
-      console.debug("Loaded configuration.");
-    })
-    .catch((error) => {
-      console.debug("Failed to load configuration.");
-    });
-}
-
 function loadProfilesListener(details) {
+  loadMatchingCriteria();
+
   let responseBody = "";
 
   let filter = browser.webRequest.filterResponseData(details.requestId);
@@ -55,6 +40,7 @@ function loadProfilesListener(details) {
 
   // Read, manipulate and write the response body.
   filter.onstop = (event) => {
+    console.debug("Started rating profiles.")
     try {
       // Parse the response body and prefix the user name with the profile rating.
       const json = JSON.parse(responseBody);
@@ -75,6 +61,17 @@ function loadProfilesListener(details) {
   };
 
   return {};
+}
+
+function loadMatchingCriteria() {
+  browser.storage.sync.get('extensionConfiguration')
+    .then((result) => {
+      EXTENSION_CONFIGURATION = result.extensionConfiguration;
+      console.debug("Loaded configuration.");
+    })
+    .catch((error) => {
+      console.debug("Failed to load configuration.");
+    });
 }
 
 function getProfileRating(user) {

@@ -3,7 +3,7 @@
 ## Release 1.0.1 
 
 ### Bug Fixes
-* Read changes to the matching criteria on reloading the web app.
+* Read changes of the matching criteria before rating profiles.
 
 ## Release 1.0.0
 
