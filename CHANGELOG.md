@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+### New Features
+* Open the matching criteria by means of a shortcut.
+
 ### Bug Fixes
 * Load extension for subdomains of bumble.
 
