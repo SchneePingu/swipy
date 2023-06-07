@@ -6,6 +6,12 @@ const NEGATIVE_VOTE_IDENTIFIER = "[-]";
 
 let EXTENSION_CONFIGURATION = null
 
+browser.commands.onCommand.addListener((command) => {
+  if (command === "open-options") {
+    browser.runtime.openOptionsPage();
+  }
+});
+
 browser.webRequest.onBeforeRequest.addListener(
   loadProfilesListener,
   { urls: ["https://bumble.com/*SERVER_GET_ENCOUNTERS", "https://*.bumble.com/*SERVER_GET_ENCOUNTERS"] },
