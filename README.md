@@ -1,5 +1,5 @@
 # [swipy]
-<a href="https://img.shields.io/badge/Release-v1.0.1-blue.svg"><img src="https://img.shields.io/badge/Release-v1.0.1-blue.svg" alt="Release"></a>
+<a href="https://img.shields.io/badge/Release-v1.1.0-blue.svg"><img src="https://img.shields.io/badge/Release-v1.1.0-blue.svg" alt="Release"></a>
 
 <img src="/icon/swipy.svg" alt="swipy" width="150">
 
