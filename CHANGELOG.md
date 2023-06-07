@@ -1,5 +1,10 @@
 # Changelog of `swipy`
 
+## Unreleased
+
+### Bug Fixes
+* Load extension for subdomains of bumble.
+
 ## Release 1.0.1 
 
 ### Bug Fixes
