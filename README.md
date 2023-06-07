@@ -5,7 +5,7 @@
 
 ## Installation 🔧
 
-[Download](https://github.com/SchneePingu/swipy/releases/download/v1.0.1/swipy-v1.0.1.xpi) the `.xpi` file from the latest release. On downloading the extension, Firefox will ask you about installing it.
+[Download](https://github.com/SchneePingu/swipy/releases/download/v1.1.0/swipy-v1.1.0.xpi) the `.xpi` file from the latest release. On downloading the extension, Firefox will ask you about installing it.
 That's it!
 
 ## Description 📜

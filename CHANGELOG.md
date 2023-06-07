@@ -1,6 +1,6 @@
 # Changelog of `swipy`
 
-## Unreleased
+## Release 1.1.0
 
 ### New Features
 * Open the matching criteria by means of a shortcut.
