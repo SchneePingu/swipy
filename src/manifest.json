@@ -16,7 +16,8 @@
     "notifications",
     "webRequest",
     "webRequestBlocking",
-    "https://bumble.com/"
+    "https://bumble.com/",
+    "https://*.bumble.com/"
   ],
 
   "background": {
@@ -25,7 +26,7 @@
 
   "content_scripts": [
     {
-      "matches": ["https://bumble.com/*"],
+      "matches": ["https://bumble.com/*", "https://*.bumble.com/*"],
       "js": ["content.js"]
     }],
 
@@ -37,7 +38,7 @@
   "page_action": {
     "default_icon": "icon/autoplay.svg",
     "default_title": "swipe profiles",
-    "show_matches": ["https://bumble.com/app"]
+    "show_matches": ["https://bumble.com/app", "https://*.bumble.com/app"]
   }
 }
 

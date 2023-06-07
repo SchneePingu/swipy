@@ -8,7 +8,7 @@ let EXTENSION_CONFIGURATION = null
 
 browser.webRequest.onBeforeRequest.addListener(
   loadProfilesListener,
-  { urls: ["https://bumble.com/*SERVER_GET_ENCOUNTERS"] },
+  { urls: ["https://bumble.com/*SERVER_GET_ENCOUNTERS", "https://*.bumble.com/*SERVER_GET_ENCOUNTERS"] },
   ["blocking"]
 )
 
