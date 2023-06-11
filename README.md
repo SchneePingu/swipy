@@ -8,6 +8,8 @@
 [Download](https://github.com/SchneePingu/swipy/releases/download/v1.1.0/swipy-v1.1.0.xpi) the `.xpi` file from the latest release. On downloading the extension, Firefox will ask you about installing it.
 That's it!
 
+_Notice, that if you have set Firefox to never remember the browsing history, then you have to allow using `swipy` in privacy mode._
+
 ## Description 📜
 `swipy` is an extension for Firefox to automate swiping profiles on the dating web app [bumble](https://bumble.com/app).
 It rates profiles according to configurable matching criteria and marks a profile as either matching or not matching.
@@ -85,7 +87,9 @@ To start automatically "liking" and "disliking" profiles, navigate to the view, 
 icon in the browser's URL bar.
 This continuously swipes profiles until the maximal number of daily "likes" is reached, you leave the profiles view, the web page is reloaded or an error occurs with the routine.
 
-(If you experience that the automated swiping does not start on clicking the icon, please reload the web page and try again.)
+#### Troubleshooting
+
+If you do not see the icon for swiping profiles automatically, then please allow `swipy` being used in privacy mode. This can be done in the permissions tab of the add-on manager of Firefox, which can be accessed by the shortcut `Ctrl+Alt+c` or by typing `about:addons` in the URL bar.
 
 ## Why have I written swipy? ❤️
 `swipy` is NOT meant to do any harm to anyone or anything. It is NOT meant to support you on treating people superficially and finding hook-ups. Neither is it meant to harm the dating web app and the company behind it in any way.
