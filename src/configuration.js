@@ -1,17 +1,21 @@
 const EXTENSION_CONFIGURATION_ATTRIBUTES = {
   family: {
+    id: 'lifestyle_family_plans',
     text: '#familyText',
     checkbox: '#familyCheckbox'
   },
   smoking: {
+    id: 'lifestyle_smoking',
     text: '#smokingText',
     checkbox: '#smokingCheckbox'
   },
   education: {
+    id: 'lifestyle_education',
     text: '#educationText',
     checkbox: '#educationCheckbox'
   },
   relationship: {
+    id: 'lifestyle_dating_intentions',
     text: '#relationshipText',
     checkbox: '#relationshipCheckbox'
   }
@@ -20,29 +24,19 @@ const EXTENSION_CONFIGURATION_ATTRIBUTES = {
 function saveConfiguration(event) {
   console.debug("Saving configuration.");
 
+  let extensionConfiguration = {};
+
+  for (const propertyKey in EXTENSION_CONFIGURATION_ATTRIBUTES) {
+    extensionConfiguration[propertyKey] = {}
+    extensionConfiguration[propertyKey].id = EXTENSION_CONFIGURATION_ATTRIBUTES[propertyKey].id;
+    extensionConfiguration[propertyKey].text =
+      document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES[propertyKey].text).value,
+    extensionConfiguration[propertyKey].checkbox =
+      document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES[propertyKey].checkbox).checked
+  }
+
   browser.storage.sync.set({
-    extensionConfiguration: {
-      family: {
-        id: 'lifestyle_family_plans',
-        text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.family.text).value,
-        checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.family.checkbox).checked
-      },
-      smoking: {
-        id: 'lifestyle_smoking',
-        text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.smoking.text).value,
-        checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.smoking.checkbox).checked
-      },
-      education: {
-        id: 'lifestyle_education',
-        text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.text).value,
-        checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.checkbox).checked
-      },
-      relationship: {
-        id: 'lifestyle_dating_intentions',
-        text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.text).value,
-        checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.checkbox).checked
-      },
-    }
+    extensionConfiguration: extensionConfiguration
   });
   event.preventDefault();
 
@@ -58,22 +52,12 @@ function restoreConfiguration() {
 
   const extensionConfiguration = browser.storage.sync.get('extensionConfiguration');
   extensionConfiguration.then((result) => {
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.family.text).value =
-      result.extensionConfiguration.family.text || '';
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.family.checkbox).checked =
-      result.extensionConfiguration.family.checkbox || false;
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.smoking.text).value =
-      result.extensionConfiguration.smoking.text || '';
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.smoking.checkbox).checked =
-      result.extensionConfiguration.smoking.checkbox || false;
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.text).value =
-      result.extensionConfiguration.education.text || '';
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.checkbox).checked =
-      result.extensionConfiguration.education.checkbox || false;
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.text).value =
-      result.extensionConfiguration.relationship.text || '';
-    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.checkbox).checked =
-      result.extensionConfiguration.relationship.checkbox || false;
+    for (const propertyKey in EXTENSION_CONFIGURATION_ATTRIBUTES) {
+      document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES[propertyKey].text).value =
+        result.extensionConfiguration[propertyKey].text || '';
+      document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES[propertyKey].checkbox).checked =
+        result.extensionConfiguration[propertyKey].checkbox || false;
+    }
   });
 }
 
