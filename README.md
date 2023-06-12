@@ -69,6 +69,26 @@ where the entries in the lists of matching values correspond to the text display
                ☐
             </td>
         </tr>
+        <tr>
+            <td>
+                Education
+            </td>
+            <td>
+            </td>
+            <td>
+               ☐
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Relationship
+            </td>
+            <td>
+            </td>
+            <td>
+               ☐
+            </td>
+        </tr>
         </tbody>
     </table>
 </form>
