@@ -10,6 +10,10 @@ const EXTENSION_CONFIGURATION_ATTRIBUTES = {
   education: {
     text: '#educationText',
     checkbox: '#educationCheckbox'
+  },
+  relationship: {
+    text: '#relationshipText',
+    checkbox: '#relationshipCheckbox'
   }
 }
 
@@ -32,7 +36,12 @@ function saveConfiguration(event) {
         id: 'lifestyle_education',
         text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.text).value,
         checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.checkbox).checked
-      }
+      },
+      relationship: {
+        id: 'lifestyle_dating_intentions',
+        text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.text).value,
+        checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.checkbox).checked
+      },
     }
   });
   event.preventDefault();
@@ -61,6 +70,10 @@ function restoreConfiguration() {
       result.extensionConfiguration.education.text || '';
     document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.checkbox).checked =
       result.extensionConfiguration.education.checkbox || false;
+    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.text).value =
+      result.extensionConfiguration.relationship.text || '';
+    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.relationship.checkbox).checked =
+      result.extensionConfiguration.relationship.checkbox || false;
   });
 }
 
