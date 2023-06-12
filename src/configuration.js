@@ -9,15 +9,15 @@ const EXTENSION_CONFIGURATION_ATTRIBUTES = {
     text: '#smokingText',
     checkbox: '#smokingCheckbox'
   },
-  education: {
-    id: 'lifestyle_education',
-    text: '#educationText',
-    checkbox: '#educationCheckbox'
-  },
   relationship: {
     id: 'lifestyle_dating_intentions',
     text: '#relationshipText',
     checkbox: '#relationshipCheckbox'
+  },
+  education: {
+    id: 'lifestyle_education',
+    text: '#educationText',
+    checkbox: '#educationCheckbox'
   }
 }
 

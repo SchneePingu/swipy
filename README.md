@@ -71,7 +71,7 @@ where the entries in the lists of matching values correspond to the text display
         </tr>
         <tr>
             <td>
-                Education
+                Relationship
             </td>
             <td>
             </td>
@@ -81,7 +81,7 @@ where the entries in the lists of matching values correspond to the text display
         </tr>
         <tr>
             <td>
-                Relationship
+                Education
             </td>
             <td>
             </td>
