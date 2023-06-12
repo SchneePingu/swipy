@@ -6,6 +6,10 @@ const EXTENSION_CONFIGURATION_ATTRIBUTES = {
   smoking: {
     text: '#smokingText',
     checkbox: '#smokingCheckbox'
+  },
+  education: {
+    text: '#educationText',
+    checkbox: '#educationCheckbox'
   }
 }
 
@@ -23,6 +27,11 @@ function saveConfiguration(event) {
         id: 'lifestyle_smoking',
         text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.smoking.text).value,
         checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.smoking.checkbox).checked
+      },
+      education: {
+        id: 'lifestyle_education',
+        text: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.text).value,
+        checkbox: document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.checkbox).checked
       }
     }
   });
@@ -48,6 +57,10 @@ function restoreConfiguration() {
       result.extensionConfiguration.smoking.text || '';
     document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.smoking.checkbox).checked =
       result.extensionConfiguration.smoking.checkbox || false;
+    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.text).value =
+      result.extensionConfiguration.education.text || '';
+    document.querySelector(EXTENSION_CONFIGURATION_ATTRIBUTES.education.checkbox).checked =
+      result.extensionConfiguration.education.checkbox || false;
   });
 }
 
