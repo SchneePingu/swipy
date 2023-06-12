@@ -144,3 +144,9 @@ npm run lint
 ```
 npm run sign
 ```
+
+## Future Outlook 🔮
+
+For `swipy`, it is planned to include further matching criteria in the configuration.
+Furthermore, it is intended to extend the automated swiping by a mode, where it pauses on matching profiles,
+such that the user can have a look on a profile and vote. After the vote the automated swiping will continue.
