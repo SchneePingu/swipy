@@ -1,5 +1,11 @@
 # Changelog of `swipy`
 
+## Unreleased
+
+### New Features
+* Include "Relationship" in matching criteria.
+* Include "Education" in matching criteria.
+
 ## Release 1.1.0
 
 ### New Features
