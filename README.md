@@ -145,6 +145,18 @@ npm run lint
 npm run sign
 ```
 
+#### Versioning
+
+`swipy` uses semantic versioning.
+To upgrade the version number, use the `upgradeVersion.sh` script with one of the following parameters:
+`-M` to increase the major version, `-m` to increase the minor version and `-p` to increase the patch version.
+
+```
+./upgradeVersion.sh -M
+./upgradeVersion.sh -m
+./upgradeVersion.sh -p
+```
+
 ## Future Outlook 🔮
 
 For `swipy`, it is planned to include further matching criteria in the configuration.
