@@ -5,14 +5,14 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 if [ "$#" -eq 0 ]
 then
   >&2 echo "error: missing flag"
-  echo "usage: $(basename $0) [-Mmp]"
+  echo "usage: $(basename "$0") [-Mmp]"
   exit 1
 fi
 
 if [ "$#" -gt 1 ]
 then
   >&2 echo "error: too many flags"
-  echo "usage: $(basename $0) [-Mmp]"
+  echo "usage: $(basename "$0") [-Mmp]"
   exit 1
 fi
 
@@ -24,32 +24,32 @@ do
     p ) patch=true;;
     ? ) 
      >&2 echo "error: unknown flag"
-     echo "usage: $(basename $0) [-Mmp]"
+     echo "usage: $(basename "$0") [-Mmp]"
      exit 1
   esac
 done
 
-shift $(($OPTIND - 1))
+shift $((OPTIND - 1))
 
 
 currentVersion=$(grep -Po '"version": "\K[1-9]+\.[0-9]+\.[0-9]+(?=")' package.json)
 
-versionParts=(${currentVersion//./ })
+IFS="." read -r -a versionParts <<< "$currentVersion"
 
-if [ ! -z $major ]
+if [ -n "$major" ]
 then
   ((versionParts[0]++))
   versionParts[1]=0
   versionParts[2]=0
 fi
 
-if [ ! -z $minor ]
+if [ -n "$minor" ]
 then
   ((versionParts[1]++))
   versionParts[2]=0
 fi
 
-if [ ! -z $patch ]
+if [ -n "$patch" ]
 then
   ((versionParts[2]++))
 fi
