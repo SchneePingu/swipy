@@ -103,7 +103,7 @@ function isMatching(user) {
     }
 
     const matchingValues = JSON.parse(`[${property.text}]`);
-    if (!matchingValues.includes(profileField.display_value)) {
+    if (matchingValues.length > 0 && !matchingValues.includes(profileField.display_value)) {
       return false;
     }
   }
