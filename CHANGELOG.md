@@ -5,6 +5,7 @@
 ### New Features
 * Include "Relationship" in matching criteria.
 * Include "Education" in matching criteria.
+* Include "Drinking" in matching criteria.
 
 ## Release 1.1.0
 
