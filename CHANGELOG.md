@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+## Release 1.2.0
+
 ### New Features
 * Include "Relationship" in matching criteria.
 * Include "Education" in matching criteria.

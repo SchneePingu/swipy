@@ -1,11 +1,11 @@
 # [swipy]
-<a href="https://img.shields.io/badge/Release-v1.1.0-blue.svg"><img src="https://img.shields.io/badge/Release-v1.1.0-blue.svg" alt="Release"></a>
+<a href="https://img.shields.io/badge/Release-v1.2.0-blue.svg"><img src="https://img.shields.io/badge/Release-v1.2.0-blue.svg" alt="Release"></a>
 
 <img src="/icon/swipy.svg" alt="swipy" width="150">
 
 ## Installation 🔧
 
-[Download](https://github.com/SchneePingu/swipy/releases/download/v1.1.0/swipy-v1.1.0.xpi) the `.xpi` file from the latest release. On downloading the extension, Firefox will ask you about installing it.
+[Download](https://github.com/SchneePingu/swipy/releases/download/v1.2.0/swipy-v1.2.0.xpi) the `.xpi` file from the latest release. On downloading the extension, Firefox will ask you about installing it.
 That's it!
 
 _Notice, that if you have set Firefox to never remember the browsing history, then you have to allow using `swipy` in privacy mode._

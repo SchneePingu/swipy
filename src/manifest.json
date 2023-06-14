@@ -2,7 +2,7 @@
   "description": "An extension for Firefox to automate swiping bumble profiles.",
   "manifest_version": 2,
   "name": "swipy",
-  "version": "1.1.0",
+  "version": "1.2.0",
 
   "browser_specific_settings": {
     "gecko": {
