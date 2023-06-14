@@ -18,6 +18,11 @@ const EXTENSION_CONFIGURATION_ATTRIBUTES = {
     id: 'lifestyle_education',
     text: '#educationText',
     checkbox: '#educationCheckbox'
+  },
+  drinking: {
+    id: 'lifestyle_drinking',
+    text: '#drinkingText',
+    checkbox: '#drinkingCheckbox'
   }
 }
 

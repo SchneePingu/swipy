@@ -89,6 +89,16 @@ where the entries in the lists of matching values correspond to the text display
                ☐
             </td>
         </tr>
+        <tr>
+            <td>
+                Drinking
+            </td>
+            <td>
+            </td>
+            <td>
+               ☐
+            </td>
+        </tr>
         </tbody>
     </table>
 </form>
