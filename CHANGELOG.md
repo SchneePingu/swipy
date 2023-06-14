@@ -9,6 +9,9 @@
 * Include "Education" in matching criteria.
 * Include "Drinking" in matching criteria.
 
+### Bug Fixes
+* Match a profile if no matching value is given for a property.
+
 ## Release 1.1.0
 
 ### New Features
