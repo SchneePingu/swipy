@@ -48,12 +48,29 @@ function loadProfilesListener(details) {
   filter.onstop = (event) => {
     console.debug("Started rating profiles.")
     try {
-      // Parse the response body and prefix the user name with the profile rating.
       const json = JSON.parse(responseBody);
+
+      // Prefix the user name with the profile rating and
+      // remove non-matching profiles if the request contains at least one match.
       json.body.forEach((message) => {
         message.client_encounters.results.forEach((result) => {
           result.user.name = `${getProfileRating(result.user)} ${result.user.name}`;
         });
+
+        const containsNoMatch = message.client_encounters.results.every((result) => {
+          return !(isMatching(result.user) || votedPositive(result.user));
+        });
+
+        if (containsNoMatch) {
+          return;
+        }
+
+        // Remove non-matching profiles.
+        message.client_encounters.results.reduceRight(function(accumulator, result, index, object) {
+          if (!(isMatching(result.user) || votedPositive(result.user))) {
+            object.splice(index, 1);
+          }
+        }, []);
       });
 
       filter.write(ENCODER.encode(JSON.stringify(json)));
