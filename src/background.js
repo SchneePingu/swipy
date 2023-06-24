@@ -18,15 +18,6 @@ browser.webRequest.onBeforeRequest.addListener(
   ["blocking"]
 )
 
-browser.pageAction.onClicked.addListener(() => {
-  browser.tabs
-    .query({
-      currentWindow: true,
-      active: true,
-    })
-    .then(voteProfiles);
-})
-
 function loadProfilesListener(details) {
   loadMatchingCriteria();
 

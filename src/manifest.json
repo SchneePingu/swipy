@@ -35,12 +35,6 @@
     "browser_style": true
   },
 
-  "page_action": {
-    "default_icon": "icon/autoplay.svg",
-    "default_title": "Swipe profiles automatically",
-    "show_matches": ["https://bumble.com/app", "https://*.bumble.com/app"]
-  },
-
   "commands": {
     "open-options": {
       "suggested_key": {
