@@ -1,3 +1,5 @@
+const PROFILE_SECTION_SELECTOR = '.encounters-story-profile';
+const ABOUT_PROFILE_SECTION_SELECTOR = '.encounters-story-section--about';
 const PROFILE_HEADER_SELECTOR = '.encounters-story-profile__header';
 const VOTE_POSITIVE_BUTTON_SELECTOR = '.encounters-action--like';
 const VOTE_NEGATIVE_BUTTON_SELECTOR = '.encounters-action--dislike';
@@ -73,3 +75,27 @@ function message(content) {
     response: content
   });
 }
+
+function waitForElement(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
+waitForElement(PROFILE_SECTION_SELECTOR).then((profileSection) => {
+    profileSection.insertAdjacentElement('afterend', document.querySelector(ABOUT_PROFILE_SECTION_SELECTOR));
+})
