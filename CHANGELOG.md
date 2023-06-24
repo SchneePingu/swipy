@@ -1,6 +1,8 @@
 # Changelog of `swipy`
 
 ## Unreleased
+* Discard non-matching profiles.
+* Show the profile description on the top page.
 
 ## Release 1.2.0
 
