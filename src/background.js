@@ -48,13 +48,7 @@ function loadProfilesListener(details) {
           result.user.name = `${getProfileRating(result.user)} ${result.user.name}`;
         });
 
-        const containsNoMatch = message.client_encounters.results.every((result) => {
-          return !(isMatching(result.user) || votedPositive(result.user));
-        });
-
-        if (containsNoMatch) {
-          return;
-        }
+        const firstProfile = message.client_encounters.results[0];
 
         // Remove non-matching profiles.
         message.client_encounters.results.reduceRight(function(accumulator, result, index, object) {
@@ -62,6 +56,10 @@ function loadProfilesListener(details) {
             object.splice(index, 1);
           }
         }, []);
+
+        if (message.client_encounters.results.length === 0) {
+            message.client_encounters.results = [firstProfile];
+        }
       });
 
       filter.write(ENCODER.encode(JSON.stringify(json)));
