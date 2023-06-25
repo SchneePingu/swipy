@@ -123,16 +123,3 @@ function votedPositive(user) {
   const votedPositiveIdentifier = 2
   return user.their_vote === votedPositiveIdentifier;
 }
-
-function voteProfiles(tabs) {
-  console.debug("Started voting profiles.");
-  for (const tab of tabs) {
-    browser.tabs
-      .sendMessage(tab.id, {
-        positiveVoteIdentifier: POSITIVE_VOTE_IDENTIFIER,
-        negativeVoteIdentifier: NEGATIVE_VOTE_IDENTIFIER
-      })
-      .then((response) => console.debug(response.response))
-      .catch((error) => console.debug("Stopped voting profiles (cannot run voting routine)."));
-  }
-}
