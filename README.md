@@ -11,8 +11,9 @@ That's it!
 _Notice, that if you have set Firefox to never remember the browsing history, then you have to allow using `swipy` in privacy mode._
 
 ## Description 📜
-`swipy` is an extension for Firefox to automate swiping profiles on the dating web app [bumble](https://bumble.com/app).
+`swipy` is an extension for Firefox to filter profiles on the dating web app [bumble](https://bumble.com/app).
 It rates profiles according to configurable matching criteria and marks a profile as either matching or not matching.
+Based on this, whenever possible, it will only show matching profiles to you!
 
 **Notice that a profile, which "likes" you, is always considered a matching profile.**
 
