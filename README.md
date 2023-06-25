@@ -129,7 +129,7 @@ If you do not see the icon for swiping profiles automatically, then please allow
 Please be aware that you are using `swipy` on your own risk!
 Keep in mind: where is code there is bugs, and where is money there is company interests.
 Maybe all of a sudden profiles are rated wrongly, because the code of the dating web app has changed.
-Maybe all of a sudden the dating web app blocks you, because you are swiping profiles at machine-like speed.
+Maybe all of a sudden the dating web app blocks you, because of using this browser extension.
 Imagine what this would mean to you and weigh the risks.
 
 I AM NOT RESPONSIBLE FOR ANYTHING ANYONE DOES BY MEANS OF `swipy`.
