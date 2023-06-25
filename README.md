@@ -179,6 +179,11 @@ However, only about two weeks after the first release, the dating web app had no
 After one week of spending my evenings on figuring out how to lever out the countermeasures, I finally had to admit defeat.
 I was not smart enough to solve the issue. Yet.
 
+What was left of `swipy` at this point, is the profile rating.
+No longer being able to discard non-matching profiles automatically, I came up with the idea of not showing them to the user in the first place, thus a filter.
+This is what `swipy` is now, a profile filter based on matching criteria.
+Whenever possible - yes, there is restrictions - it will only show matching profiles to you!
+
 ## Future Outlook 🔮
 
 Maybe one day `swipy` will provide the ability to swipe profiles automatically again.
