@@ -167,6 +167,18 @@ To upgrade the version number, use the `upgradeVersion.sh` script with one of th
 ./upgradeVersion.sh -p
 ```
 
+## Swipy's Past ⌛️
+
+Originally `swipy` was intended to automate swiping profiles based on matching criteria.
+After spending an exhausting month of leisure time on learning, reverse engineering and developing, the first major version, `v1`, was released.
+It provided a page action, which triggered "liking" and "disliking" profiles one after another until the daily limit of votes was reached.
+This way, dependent on how strict the matching criteria were, users - including me - were able to "vote" a vast amount of profiles every day effortlessly, thus increasing the chances of a match.
+
+And it worked! I was happy and proud of what I had achieved. All the effort seemed to pay off.
+However, only about two weeks after the first release, the dating web app had noticed `swipy` and took countermeasures making the automated swiping of profiles no longer work.
+After one week of spending my evenings on figuring out how to lever out the countermeasures, I finally had to admit defeat.
+I was not smart enough to solve the issue.
+
 ## Future Outlook 🔮
 
 For `swipy`, it is planned to include further matching criteria in the configuration.
