@@ -3,6 +3,7 @@
 ## Unreleased
 * Discard non-matching profiles.
 * Show the profile description on the top page.
+* Remove page action (automated swiping was no longer working).
 
 ## Release 1.2.0
 
