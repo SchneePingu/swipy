@@ -1,9 +1,11 @@
 # Changelog of `swipy`
 
 ## Unreleased
+
+## Release 2.0.0
 * Discard non-matching profiles.
 * Show the profile description on the top page.
-* Remove page action (automated swiping was no longer working).
+* Remove page action (automated swiping is no longer working).
 
 ## Release 1.2.0
 
