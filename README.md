@@ -105,21 +105,7 @@ where the entries in the lists of matching values correspond to the text display
 
 (This example configuration will match only profiles with a required `family badge` displaying `Don't want` and an optional `smoking badge` displaying `Never`, where the `family badge` must be present, while the `smoking badge` is allowed to be absent for matching the profile.)
 
-**Make sure to configure the matching criteria before using the extension and reload the dating app web page whenever changing the configuration, such that the new matching criteria applied.**
-
-### Automated Swiping
-
-`swipy` provides the functionality to automatically "like" and "dislike" profiles according to the rating described above,
-that is a profile matching the criteria is "liked", while a profile **not** matching the criteria is "disliked".
-
-To start automatically "liking" and "disliking" profiles, navigate to the view, where profiles are shown to you, and click the
-![Test](src/icon/autoplay.svg)
-icon in the browser's URL bar.
-This continuously swipes profiles until the maximal number of daily "likes" is reached, you leave the profiles view, the web page is reloaded or an error occurs with the routine.
-
-#### Troubleshooting
-
-If you do not see the icon for swiping profiles automatically, then please allow `swipy` being used in privacy mode. This can be done in the permissions tab of the add-on manager of Firefox, which can be accessed by the shortcut `Ctrl+Alt+c` or by typing `about:addons` in the URL bar.
+**Make sure to configure the matching criteria before using the extension and reload the dating app web page whenever changing the configuration, such that the new matching criteria are applied.**
 
 ## Why have I written swipy? ❤️
 `swipy` is NOT meant to do any harm to anyone or anything. It is NOT meant to support you on treating people superficially and finding hook-ups. Neither is it meant to harm the dating web app and the company behind it in any way.
