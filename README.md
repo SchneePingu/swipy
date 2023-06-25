@@ -177,10 +177,8 @@ This way, dependent on how strict the matching criteria were, users - including 
 And it worked! I was happy and proud of what I had achieved. All the effort seemed to pay off.
 However, only about two weeks after the first release, the dating web app had noticed `swipy` and took countermeasures making the automated swiping of profiles no longer work.
 After one week of spending my evenings on figuring out how to lever out the countermeasures, I finally had to admit defeat.
-I was not smart enough to solve the issue.
+I was not smart enough to solve the issue. Yet.
 
 ## Future Outlook 🔮
 
-For `swipy`, it is planned to include further matching criteria in the configuration.
-Furthermore, it is intended to extend the automated swiping by a mode, where it pauses on matching profiles,
-such that the user can have a look on a profile and vote. After the vote the automated swiping will continue.
+Maybe one day `swipy` will provide the ability to swipe profiles automatically again.
