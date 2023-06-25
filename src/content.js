@@ -21,6 +21,10 @@ function waitForElement(selector) {
     });
 }
 
-waitForElement(PROFILE_SECTION_SELECTOR).then((profileSection) => {
+function formatProfile() {
+  waitForElement(PROFILE_SECTION_SELECTOR).then((profileSection) => {
     profileSection.insertAdjacentElement('afterend', document.querySelector(ABOUT_PROFILE_SECTION_SELECTOR));
-})
+  })
+}
+
+browser.runtime.onMessage.addListener(() => formatProfile());

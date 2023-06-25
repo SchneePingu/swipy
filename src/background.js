@@ -12,11 +12,45 @@ browser.commands.onCommand.addListener((command) => {
   }
 });
 
+browser.webRequest.onCompleted.addListener(
+  showProfileListener,
+  { urls: [
+    "https://bumble.com/*SERVER_ENCOUNTERS_VOTE",
+    "https://*.bumble.com/*SERVER_ENCOUNTERS_VOTE",
+    "https://bumble.com/*SERVER_GET_ENCOUNTERS",
+    "https://*.bumble.com/*SERVER_GET_ENCOUNTERS",
+    ]
+  },
+  []
+)
+
 browser.webRequest.onBeforeRequest.addListener(
   loadProfilesListener,
-  { urls: ["https://bumble.com/*SERVER_GET_ENCOUNTERS", "https://*.bumble.com/*SERVER_GET_ENCOUNTERS"] },
+  { urls: [
+    "https://bumble.com/*SERVER_GET_ENCOUNTERS",
+    "https://*.bumble.com/*SERVER_GET_ENCOUNTERS"
+    ]
+  },
   ["blocking"]
 )
+
+
+function showProfileListener() {
+  browser.tabs.query({
+    currentWindow: true,
+    active: true,
+    })
+    .then(formatProfile);
+}
+
+function formatProfile(tabs) {
+  for (const tab of tabs) {
+    browser.tabs
+      .sendMessage(tab.id, {})
+      .then((response) => console.debug(response.response))
+      .catch((error) => console.debug("Failed to format a profile."));
+  }
+}
 
 function loadProfilesListener(details) {
   loadMatchingCriteria();
@@ -69,7 +103,6 @@ function loadProfilesListener(details) {
     } finally {
       filter.close();
     }
-
   };
 
   return {};
